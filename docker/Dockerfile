@@ -5,7 +5,7 @@ WORKDIR $HOME
 
 #ADD --chown=indy:indy src/requirements.txt $HOME/src/
 #RUN pip --no-cache-dir install -r src/requirements.txt
-RUN pip install git+https://github.com/nrempel/von-x.git#master
+RUN pip install --upgrade git+https://github.com/nrempel/von-x.git@api-v2 && echo 4
 
 ADD --chown=indy:indy . $HOME
 
