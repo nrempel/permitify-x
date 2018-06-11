@@ -1,12 +1,3 @@
-static:
-  bc-assets:
-    path: /bcreg/assets
-    target: ../assets
-
-proxy:
-  bc-tob:
-    url: $TOB_API_URL/api/v1
-
 issuers:
   BC-REG:
     path: /bcreg
@@ -14,7 +5,7 @@ issuers:
 forms:
   bcreg-incorp:
     path: /bcreg/incorporation
-    type: submit-credential
+    type: issue-credential
     schema_name: incorporation.bc_registries
     page_title: BC Corporate Registry
     title: Incorporation
@@ -64,7 +55,7 @@ forms:
 
   bcreg-dba:
     path: /bcreg/dba
-    type: submit-credential
+    type: issue-credential
     schema_name: doing_business_as.bc_registries
     page_title: BC Corporate Registry
     title: Doing Business As
