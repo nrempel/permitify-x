@@ -5,7 +5,9 @@ WORKDIR $HOME
 
 #ADD --chown=indy:indy src/requirements.txt $HOME/src/
 #RUN pip --no-cache-dir install -r src/requirements.txt
-RUN pip install git+https://github.com/PSPC-SPAC-buyandsell/von-x.git#master
+RUN echo 008
+RUN pip install gunicorn
+RUN pip install git+https://github.com/nrempel/von-x.git@api-v2
 
 ADD --chown=indy:indy . $HOME
 
