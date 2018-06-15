@@ -22,12 +22,7 @@ issuers:
         mapping:
           - model: address
             cardinality_fields:
-            - civic_address
-            - city
-            - province
-            - postal_code
-            - country
-            - type
+              - type
             fields:
               addressee:
                 input: addressee
