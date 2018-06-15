@@ -1,9 +1,5 @@
 issuers:
   BC-REG:
-    jurisdiction:
-      name: British Columbia
-      abbreviation: BC
-
     name: BC Corporate Registry
     abbreviation: BCReg
     url: "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/\
@@ -20,6 +16,14 @@ issuers:
         issuer_url: $APPLICATION_URL_INCORP
         source_claim: legal_entity_id
         mapping:
+          - model: name
+            fields:
+              text:
+                input: legal_name
+                from: claim
+              type:
+                input: legal_name
+                from: value
           - model: address
             cardinality_fields:
               - type
