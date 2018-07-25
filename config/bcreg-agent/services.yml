@@ -112,7 +112,7 @@ issuers:
               end_date:
                 input: end_date
                 from: claim
-                
+
 proof_requests:
   registration:
     version: '1.0.0'
